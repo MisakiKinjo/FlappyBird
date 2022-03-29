@@ -13,6 +13,7 @@
 		5B206D7927EEAEA4006ABAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B206D7727EEAEA4006ABAE9 /* Main.storyboard */; };
 		5B206D7B27EEAEA6006ABAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B206D7A27EEAEA6006ABAE9 /* Assets.xcassets */; };
 		5B206D7E27EEAEA6006ABAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B206D7C27EEAEA6006ABAE9 /* LaunchScreen.storyboard */; };
+		5B206D8627EEB74F006ABAE9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B206D8527EEB74F006ABAE9 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5B206D7A27EEAEA6006ABAE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B206D7D27EEAEA6006ABAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B206D7F27EEAEA6006ABAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B206D8527EEB74F006ABAE9 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5B206D7127EEAEA4006ABAE9 /* AppDelegate.swift */,
 				5B206D7327EEAEA4006ABAE9 /* SceneDelegate.swift */,
 				5B206D7527EEAEA4006ABAE9 /* ViewController.swift */,
+				5B206D8527EEB74F006ABAE9 /* GameScene.swift */,
 				5B206D7727EEAEA4006ABAE9 /* Main.storyboard */,
 				5B206D7A27EEAEA6006ABAE9 /* Assets.xcassets */,
 				5B206D7C27EEAEA6006ABAE9 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				5B206D7627EEAEA4006ABAE9 /* ViewController.swift in Sources */,
 				5B206D7227EEAEA4006ABAE9 /* AppDelegate.swift in Sources */,
+				5B206D8627EEB74F006ABAE9 /* GameScene.swift in Sources */,
 				5B206D7427EEAEA4006ABAE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +299,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,7 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,7 +327,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,7 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
