@@ -321,11 +321,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 contact.bodyB.node?.removeFromParent()
             }
             //アイテム取得音
-            let soundNode = SKAudioNode(fileNamed: "itemSound")
+            let soundNode = SKAudioNode(fileNamed: "財布をジャラッ.mp3")
             self.addChild(soundNode)
-            let sound = SKAction.playSoundFileNamed("itemSound", waitForCompletion: false)
+            let sound = SKAction.playSoundFileNamed("財布をジャラッ.mp3", waitForCompletion: false)
             let playSound = SKAction.sequence([sound])
             soundNode.run(playSound)
+            print("playSound")
             
         }else{
             //壁か地面と衝突した
