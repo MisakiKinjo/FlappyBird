@@ -22,6 +22,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scoreCategory: UInt32 = 1 << 3  //0...01000
     let itemCategory: UInt32 = 1 << 4
     
+    //効果音
+    let sound = SKAction.playSoundFileNamed("itemSound.mp3", waitForCompletion: false)
+    
     //スコア用
     var score = 0
     var itemScore = 0
@@ -320,13 +323,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if (contact.bodyB.categoryBitMask & itemCategory) == itemCategory{
                 contact.bodyB.node?.removeFromParent()
             }
+            
             //アイテム取得音
-            let soundNode = SKAudioNode(fileNamed: "財布をジャラッ.mp3")
-            self.addChild(soundNode)
-            let sound = SKAction.playSoundFileNamed("財布をジャラッ.mp3", waitForCompletion: false)
-            let playSound = SKAction.sequence([sound])
-            soundNode.run(playSound)
-            print("playSound")
+            print("runSound")
+            run(sound)
             
         }else{
             //壁か地面と衝突した
@@ -412,7 +412,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let movingDistance = self.frame.size.width + itemTexture.size().width
         
         //画面外まで移動するアクション
-        let moveItem = SKAction.moveBy(x: -movingDistance, y: 0, duration: 4.75)
+        let moveItem = SKAction.moveBy(x: -movingDistance, y: 0, duration: 4)
         
         //自身を取り除くアクション
         let removeItem = SKAction.removeFromParent()
@@ -451,14 +451,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.itemNode.addChild(item)
             item.addChild(itemShow)
         })
-     /*
-        let erase = eraseItem()
-        func eraseItem() {
-            if states == 1{
-                SKAction.removeFromParent()
-                states = 0
-            }
-        }*/
+     
         // item作成 -> 時間まち　の繰り返しアクションをノードに設定
         let waitAnimation = SKAction.wait(forDuration:2.5)
         let repeatForeverAnimation = SKAction.repeatForever(SKAction.sequence([waitAnimation, createItemAnimation]))
